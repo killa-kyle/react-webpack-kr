@@ -5,14 +5,14 @@ var config = {
         './main.js',
     ],
     output: {
-        path: path.join(__dirname, 'public'),
+        path: path.join(__dirname, 'www'),
         filename: 'bundle.js'
     },
     module: {
         loaders: [
             {
                 test: /\.js$/,
-                exclude: /node_modules/.
+                exclude: /node_modules/,
                 loaders: ['babel']
             },
         ],
