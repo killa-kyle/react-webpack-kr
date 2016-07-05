@@ -4,7 +4,7 @@ import Hello from './Hello';
  
 document.addEventListener('DOMContentLoaded', function() {
   ReactDOM.render(
-    <Hello name="world" />,
+    <Hello name="Carrots" />,
     document.getElementById('app')
   );
 });

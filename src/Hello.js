@@ -7,17 +7,35 @@ class Hello extends React.Component {
       count: 0,
     };
   }
- 
+ increment(){
+    let oldstate = this.state;
+    let newstate = oldstate;
+    newstate.count++;
+    this.setState(newstate);
+ }
+ decrement(){
+  let oldstate = this.state;
+  let newstate = oldstate;
+  newstate.count--;
+  this.setState(newstate);
+ }
   render() {
     return (
       <div>
-        <h1>Hello {this.props.name}!</h1>
+        <h1>Number of {this.props.name}:  {this.state.count}</h1>
         <button
-          onClick={() => {
-            this.setState({ count: this.state.count + 1 });
-          }}
+          onClick={() =>            
+            this.decrement()
+          }
         >
-          Count: {this.state.count}
+          -
+        </button>
+        <button
+          onClick={() =>            
+            this.increment()
+          }
+        >
+          +
         </button>
       </div>
     );
